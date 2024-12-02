@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .nav {
+            position: sticky;
+            display: flex;
+            top: 0;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            z-index: 10;
+            height: 100px;
+        }
+
+        .logo {
+            padding: 40px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .sectionOne {
+            background-image: url('https://cdn-site.gojek.com/uploads/hero_b18c33ed07.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 120vh;
+            /* Full viewport height */
+            display: flex;
+            /* Flexbox to center text */
+        }
+
+        .sectionOnetext {
+            font-size: 45px;
+            /* Large font size for the text */
+            font-weight: 600;
+            /* Bold text */
+            color: white;
+            text-align: left;
+            margin-top: 300px;
+            /* Adjust vertical positioning */
+            margin-left: 180px;
+            padding: 0 20px;
+            /* Add padding to avoid text touching screen edges */
+            max-width: 700px;
+        }
+
+        .sectionTwo {
+            background-color: black;
+            position: relative;
+            height: 110vh;
+            color: white;
+            text-align: center;
+
+
+
+        }
+
+        .sectionTwotext {
+            position: relative;
+            font-size: 50px;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: 1000;
+            align-items: center;
+            padding-top: 90px;
+
+        }
+
+        .sectionTwoChild {
+            height: 60vh;
+            width: 100%;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+        }
+
+        .gabungButton {
+            background-color: #00880D;
+            border-radius: 96px;
+            width: 103px;
+            height: 44px;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            border: none;
+            margin-top: 20px;
+        }
+
+        .sectionTwoContent {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            position: relative;
+            bottom: 70px;
+
+        }
+
+        .cardOne,
+        .cardTwo,
+        .cardThree,
+        .cardFour {
+            max-width: 278px;
+            color: black;
+        }
+
+        .sectionTwoDivider {
+            color: black;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .sectionTwoDivider {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .sectionTwoSecondContent {
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+            flex-direction: row;
+
+        }
+
+        .sectionTwoSecondContent .cardOne,
+        .sectionTwoSecondContent .cardTwo,
+        .sectionTwoSecondContent .cardThree,
+        .sectionTwoSecondContent .cardFour {
+            max-width: 278px;
+            color: black;
+
+        }
+
+        .sectionTwoSecondContent img,
+        .sectionTwoSecondContent img,
+        .sectionTwoSecondContent img,
+        .sectionTwoSecondContent img {
+            position: relative;
+            top: 65px;
+            width: 270px;
+            height: 186px;
+        }
+
+        .sectionTwoSecondContent .cardBoxOne {
+       
+            position: relative;
+            bottom: 50px;
+            height: 370px;
+            width: 270px;
+            background-color: #7CCC6C;
+            border-radius: 40px;
+            z-index: -1;
+            color: black;
+            display: flex;
+            /* Use Flexbox */
+            /* Center horizontally */
+            justify-content: flex-start;
+            align-items: center;
+            /* Center vertically */
+            box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .sectionTwoSecondContent .cardBoxOne .text{
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            margin-top: 100px;
+            line-height: 0.5;
+        }
+
+        .sectionTwoSecondContent .cardBoxOne h1{
+            font-size: 40px;
+        }
+        .sectionTwoSecondContent .cardBoxTwo {
+            position: relative;
+            bottom: 50px;
+            height: 370px;
+            width: 270px;
+            background-color: #D48BC8;
+            border-radius: 40px;
+            z-index: -1;
+            color: black;
+            display: flex;
+            justify-content: flex-start;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .sectionTwoSecondContent .cardBoxTwo .text{
+            padding-top: 55px;
+            display: flex;
+            flex-direction: column; 
+            justify-content: start;
+            align-items: start;
+            margin-top: 100px;
+            line-height: 0.4;
+        }
+
+        .sectionTwoSecondContent .cardBoxTwo h1{
+            font-size: 40px;
+        }
+
+        .sectionTwoSecondContent .cardBoxTwo p{
+            line-height: 0.0;
+        }
+        .sectionTwoSecondContent .cardBoxThree {
+            position: relative;
+            bottom: 50px;
+            height: 370px;
+            width: 270px;
+            background-color: #FFAE62;
+            border-radius: 40px;
+            z-index: -1;
+            color: black;
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .sectionTwoSecondContent .cardBoxThree .text{
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            margin-top: 100px;
+            line-height: 0.2;
+        }
+
+        .sectionTwoSecondContent .cardBoxThree h1{
+            font-size: 40px;
+        }
+
+        .sectionTwoSecondContent .cardBoxFour{
+           
+            position: relative;
+            bottom: 50px;
+            height: 370px;
+            width: 270px;
+            background-color: #4AC9E3;
+            border-radius: 40px;
+            z-index: -1;
+            color: black;
+            display: flex;
+            justify-content: flex-start;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+
+            
+        }
+
+        
+        .sectionTwoSecondContent .cardBoxFour .text{
+            padding-top: 55px;
+            display: flex;
+            flex-direction: column; 
+            justify-content: start;
+            align-items: start;
+            margin-top: 100px;
+            line-height: 0.4;
+        }
+
+        .sectionTwoSecondContent .cardBoxFour h1{
+            font-size: 40px;
+        }
+        .sectionTwoSecondContent .cardBoxOne .cardBoxText p{
+            font-size: 16px;
+            color:black;
+            position: relative;
+            bottom: 200px;
+            max-width:196 ;
+        }
+
+        .sectionTwoSecondContent .cardBoxOne,  .sectionTwoSecondContent .cardBoxTwo,  .sectionTwoSecondContent .cardBoxThree,  .sectionTwoSecondContent .cardBoxFour{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+      
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo"><img src="https://lelogama.go-jek.com/prime/upload/gojek-horizontal-logo-white.svg"
+                alt="logo-grab"></div>
+        <div id="text">
+            <a href="#">Beranda</a>
+            <a href="#">Gabung Jadi Mitra</a>
+            <a href="#">GoCorp</a>
+            <a href="#">Karir</a>
+            <a href="#">Perusahaan</a>
+            <a href="#">Produk</a>
+            <a href="#">Blog</a>
+            <a href="#">Bantuan</a>
+            <a href="#">ID</a>
+        </div>
+    </div>
+
+    <div class="sectionOne">
+        <div class="sectionOnetext">
+            3 negara. 20+ layanan. 1 platform on-demand terkemuka.
+        </div>
+    </div>
+
+    <div class="sectionTwo">
+        <div class="sectionTwotext">
+            Kenalin, Gojek. Si pembawa perubahan.
+
+        </div>
+        <button class="gabungButton">Gabung</button>
+        <div class="sectionTwoChild">
+            <div class="sectionTwoContent">
+                <div class="cardOne">
+                    <img src="FortuneTop20.png" alt="" width="140px" height="186px">
+                    <h2>Fortune Top 20</h2>
+                    <p>Satu-satunya perusahaan di Asia tenggara yang dua kali berada di daftar Perusahaan Pengubah Dunia
+                        versi majalah Fortune</p>
+                </div>
+                <div class="cardTwo">
+                    <img src="BerkontribusiEkonomi.png" alt="" width="140px" height="186px">
+                    <h2>Berkontribusi lebih dari $7.1 trillion</h2>
+                    <p>Penggerak roda perekonomian Indonesia</p>
+                </div>
+                <div class="cardThree">
+                    <img src="GerakanHijau.png" alt="" width="140px" height="186px">
+                    <h2>Jaket hijau, pergerakan juga hijau</h2>
+                    <p>Gojek mengurangi pemakaian plastik hingga 11.3 ton sejak Oktober 2020</p>
+                </div>
+                <div class="cardFour">
+                    <img src="TumbuhPasPandemi.png" alt="" width="140px" height="186px">
+                    <h2>Tumbuh 80% sejak pandemi</h2>
+                    <p>Mitra Food merchants naik 80% sejak pandemi berkat solusi digitalisasi Gojek untuk UMKM</p>
+
+                </div>
+
+
+            </div>
+            <div class="sectionTwoDivider">
+                Skala Kami
+                <button class="gabungButton">Gabung</button>
+
+
+            </div>
+            <div class="sectionTwoSecondContent">
+                <div class="cardOne">
+                    <img src="https://cdn-site.gojek.com/uploads/170_mil_340e5c5603.png" alt="" width="140px"
+                        height="186px">
+                    <div class="cardBoxOne">
+
+                               <div class="text">
+                                <h1> 190 juta+</h1>
+                                <p>jumlah install aplikasi kami</p>
+                               </div>
+                          
+                    </div>
+                </div>
+                <div class="cardTwo">
+                    <img src="https://cdn-site.gojek.com/uploads/2_million_04b50bc75a.png" alt="" width="140px"
+                        height="186px">
+                    <div class="cardBoxTwo">
+                            <div class="text">
+                                <h1>2 juta+</h1>
+                                <p>mitra Driver yang sudah </p>
+                                <p>bergabung dengan kami</p>
+                            </div>
+                       
+                    </div>
+                </div>
+                <div class="cardThree">
+                    <img src="https://cdn-site.gojek.com/uploads/50_million_c34b6365a4.png" alt="" width="140px"
+                        height="186px">
+                    <div class="cardBoxThree">
+                            <div class="text">
+                                <h1>900.000+</h1>
+                                <p>jumlah mitra GoFood</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="cardFour">
+                        <img src="https://cdn-site.gojek.com/uploads/12x_growth_cc1a49b8c3.png" alt="" width="140px"
+                            height="186px">
+                        <div class="cardBoxFour">
+                                <div class="text">
+                                    <h1>2.448x</h1>
+                                    <p>lipat kenaikan pengunduhan</p>
+                                    <p>aplikasi Gojek dari 2015</p>
+                                    <p>sampai 2020</p>
+                                </div>    
+                           
+                        </div>
+    
+                    </div>
+                </div>
+              
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
